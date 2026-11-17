@@ -1,104 +1,508 @@
-<!DOCTYPE HTML>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rohan S. Puri</title>
+<meta name="description" content="Rohan S. Puri. Former co-founder and CEO of Stable. Working with founders, venture firms and infrastructure investors. New York.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://www.rohanspuri.com/">
+<meta property="og:title" content="Rohan S. Puri">
+<meta property="og:description" content="Former co-founder and CEO of Stable. Working with founders, venture firms and infrastructure investors.">
+<meta property="og:url" content="https://www.rohanspuri.com/">
+<meta property="og:image" content="https://www.rohanspuri.com/media/portrait-bw.jpg">
+<meta property="og:type" content="profile">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3f2ee;
+    --ink: #151515;
+    --ink-2: #4b4a46;
+    --muted: #84837d;
+    --rule: #dcdad3;
+    --tile: #e7e6e0;
+    --accent: #1d5c4a;
+    --sans: "Geist", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --pad: 40px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #121211;
+      --ink: #ecebe6;
+      --ink-2: #b3b2ac;
+      --muted: #7d7c76;
+      --rule: #2a2a28;
+      --tile: #1c1c1a;
+      --accent: #7cc4a8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 16px/1.55 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img, video { display: block; max-width: 100%; height: auto; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--pad); }
 
-<html>
-	<head>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  .label {
+    font: 500 11.5px/1.4 var(--mono);
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
 
-		<title>Rohan S. Puri</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-loading">
+  /* Hero */
+  .hero {
+    display: grid;
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 32px;
+    align-items: end;
+    padding: 56px 0 40px;
+  }
+  .hero > img { width: 132px; background: var(--tile); }
+  .hero + section.block { border-top: 1px solid var(--rule); }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  /* Small org logos, favicon-style */
+  .logo {
+    display: inline-block; width: 1em; height: 1em; border-radius: 3px;
+    vertical-align: -0.12em; margin-right: 0.3em;
+    box-shadow: 0 0 0 1px var(--rule);
+  }
+  .label .logo { width: 14px; height: 14px; vertical-align: -3px; margin-right: 6px; }
+  .hero p a, .rows .v a { text-decoration: none; color: var(--ink); }
+  .hero p a:hover, .rows .v a:hover { color: var(--accent); }
+  .hero h1 {
+    font-size: clamp(1.6rem, 2.4vw, 2rem);
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    margin: 0 0 10px;
+  }
+  .hero p { margin: 0; color: var(--ink-2); font-size: 1.0625rem; max-width: 40rem; }
+  .hero .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 16px; }
+  .hero .links a { text-decoration: none; color: var(--ink); }
+  .hero .links a:hover { color: var(--accent); }
 
-				<!-- Main -->
-					<section id="main" style="width:100%; max-width: 550px ">
-						<header>
-							<span class="avatar"><img src="images/UpsideHeadshot2.png" style="" alt="" /></span>
-							<img src="images/sig_logo_black.png" style="width:60%; padding-right: 20px;" alt="" />
-							<br>
-							
-							 Hi, I'm Rohan.  
-<br>
+  /* Sections */
+  section.block {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+    gap: 32px;
+    padding: 40px 0 72px;
+  }
+  section.block + section.block { border-top: 1px solid var(--rule); }
+  .rows { list-style: none; margin: 0; padding: 0; }
+  .rows li {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 13rem) minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rows li:first-child { padding-top: 0; }
+  .rows .n { font: 500 13px/1.9 var(--mono); color: var(--accent); }
+  .rows .k { font-weight: 500; }
+  .rows .v { color: var(--ink-2); }
 
-							I built <a href="http://ieeexplore.ieee.org/document/7591085/">diagnostic devices</a> and <a href="http://zensei.technology"> biometric sensors</a> at <a href="http://media.mit.edu">MIT Media Lab</a>. I used to work at <a href="techstars.com">TechStars Boston</a>, and on occasion I <a href="https://www.youtube.com/watch?v=Ds5EOJcuLOk&list=PLlxLUl6dzeqSJkpapK80LPT7uq7lr9cAs">give talks</a> and build <a href="https://play.google.com/store/apps/developer?id=Samay+LLC&hl=en">mobile apps</a>.
-<br><br>
-Subscribe to my newsletter, <a href="http://getfives.com" style="color:red">Fives</a>, where I share cutting-edge research and technology.
+  /* Work grid */
+  .grid { display: grid; gap: 48px; }
+  .grid .row { display: grid; gap: 24px; --h: clamp(240px, 32vw, 440px); }
+  .row.b { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+  .row.c { grid-template-columns: repeat(3, minmax(0, 1fr)); --h: clamp(170px, 16vw, 215px); }
+  figure.tile { margin: 0; }
+  .tile .media {
+    display: block; position: relative; overflow: hidden;
+    height: var(--h); background: var(--tile);
+  }
+  .tile .media video.overlay { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+  .tile .media video.overlay.is-playing { opacity: 1; }
+  .refs .recent i { font: 400 12px/1 var(--mono); font-style: normal; color: var(--muted); margin-left: 4px; }
+  .refs .recent .dot { color: var(--muted); padding: 0 0.45em; }
+  .refs .also.recent .src { font-weight: 500; color: var(--ink); }
+  .hero .links .logo, .contact .logo { width: 14px; height: 14px; vertical-align: -2px; margin-right: 6px; }
+  .tile .media img, .tile .media video {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+  .tile .media img { transition: transform 1.6s cubic-bezier(.2, .6, .2, 1); }
+  .tile:hover .media img { transform: scale(1.06); }
+  .tile figcaption { padding-top: 14px; }
+  .tile .t { font-weight: 500; margin: 6px 0 2px; }
+  .tile .d { color: var(--ink-2); margin: 0; max-width: 38rem; }
+  .tile .d a { text-underline-offset: 3px; text-decoration-color: var(--rule); }
+  .tile .d a:hover { text-decoration-color: currentColor; }
+  .co-figs {
+    grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 3.5fr) minmax(0, 3.5fr);
+    gap: 24px; align-items: baseline; padding-top: 16px; border-top: 1px solid var(--rule);
+  }
+  .co-figs .f { display: flex; flex-direction: column; }
+  .co-figs b { font-size: 1.6rem; font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; }
+  .co-figs span { color: var(--ink-2); font-size: 14px; }
+  .tile .quote {
+    display: flex; align-items: flex-end; padding: 24px;
+  }
+  .tile .quote p { margin: 0; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.25; letter-spacing: -0.02em; font-weight: 500; }
+  .play {
+    position: absolute; left: 16px; bottom: 16px;
+    font: 500 11.5px/1 var(--mono); letter-spacing: 0.09em; text-transform: uppercase;
+    background: var(--paper); color: var(--ink); padding: 9px 11px;
+  }
 
-<br><br>
-							I'm now working on <a href="www.stable.auto">Stable</a> in San Francisco.</br> 
-<br>
-						</header>
-						<!--
-						<hr />
-						<h2>Extra Stuff!</h2>
-						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="name" placeholder="Name" />
-							</div>
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
-							</div>
-							<div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
-							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
-							</div>
-							<ul class="actions">
-								<li><a href="#" class="button">Get Started</a></li>
-							</ul>
-						</form>
-						<hr />
-						-->
-						<footer>
-							<ul class="icons" >
-								<li><a href="https://twitter.com/rohanspuri" class="fa-twitter"></a></li>
-								<li><a href="https://www.facebook.com/rohan.puri" class="fa-facebook"></a></li>
-								<li><a href="https://www.youtube.com/playlist?list=PLlxLUl6dzeqSJkpapK80LPT7uq7lr9cAs" class="fa-youtube"></a></li>
-								<li><a href="https://www.linkedin.com/in/rohanspuri" class="fa-linkedin"></a></li>
-								<li><a href="mailto:rohan@rohanspuri.com" class="fa-envelope-o"></a></li>
-							</ul>
-						</footer>
-					</section>
+  /* Record */
+  .grp {
+    display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: 16px;
+    padding: 18px 0; border-bottom: 1px solid var(--rule);
+  }
+  .grp:first-child { padding-top: 0; }
+  .grp:last-child { border-bottom: 0; padding-bottom: 0; }
+  .grp h3 { margin: 0; padding-top: 4px; }
+  .refs { list-style: none; margin: 0; padding: 0; }
+  .refs .ref, .refs .also {
+    display: grid; grid-template-columns: 13.5rem minmax(0, 1fr) 1rem; gap: 16px;
+    align-items: baseline; padding: 7px 0; text-decoration: none;
+  }
+  .refs li:first-child > * { padding-top: 0; }
+  .refs .src { font-weight: 500; }
+  .refs .src i { font: 400 12px/1 var(--mono); font-style: normal; color: var(--muted); margin-left: 8px; }
+  .refs .ttl, .refs .also a {
+    color: var(--ink-2);
+    text-decoration: underline; text-decoration-thickness: 1px;
+    text-underline-offset: 4px; text-decoration-color: var(--muted);
+  }
+  .refs .arr { color: var(--muted); justify-self: end; transition: transform 0.2s ease; }
+  .refs .ref:hover .ttl, .refs .also a:hover { color: var(--accent); text-decoration-color: currentColor; }
+  .refs .ref:hover .arr { color: var(--accent); transform: translate(2px, -2px); }
+  .refs .also { grid-template-columns: 13.5rem minmax(0, 1fr); color: var(--ink-2); }
+  .refs .also .src { font-weight: 400; color: var(--muted); }
+  .refs .plain { margin: 0; color: var(--ink-2); }
 
-				<!-- Footer -->
-					<footer id="footer">
-						
-					</footer>
+  /* Footer */
+  footer.end {
+    display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px;
+    border-top: 1px solid var(--rule);
+    padding: 48px 0 64px;
+  }
+  footer .big { font-size: clamp(1.4rem, 2.4vw, 1.9rem); letter-spacing: -0.025em; font-weight: 500; margin: 0 0 4px; }
+  footer .sub { color: var(--muted); margin: 0; }
 
-			</div>
+  /* Fives newsletter bar, under the header */
+  .fives-bar {
+    display: grid; grid-template-columns: minmax(0, 1fr) 21rem; gap: 6px 32px; align-items: center;
+    border-top: 1px solid var(--rule); padding: 14px 0;
+  }
+  .fives-bar + section.block { border-top: 1px solid var(--rule); }
+  .fives-copy { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+  .fives-copy .label { margin-right: 10px; }
+  .fives-copy a { color: var(--ink); font-weight: 500; text-decoration: none; }
+  .fives-copy a:hover { color: var(--accent); }
+  .fives-copy .past { font-weight: 400; color: var(--muted); margin-left: 6px; }
+  .fives-bar .sub-msg { grid-column: 2; margin: 0; min-height: 0; font-size: 13.5px; }
+  .fives-bar .sub-msg:empty { display: none; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .sub-form { display: flex; border: 1px solid var(--ink); }
+  .sub-form input {
+    flex: 1; min-width: 0; border: 0; border-radius: 0; background: transparent; color: var(--ink);
+    font: 400 16px/1.2 var(--sans); padding: 8px 12px;
+  }
+  .sub-form input::placeholder { color: var(--muted); }
+  .sub-form input:focus { outline: none; }
+  .sub-form:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .sub-form button {
+    border: 0; border-radius: 0; background: var(--ink); color: var(--paper); cursor: pointer;
+    font: 500 11.5px/1 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; padding: 0 18px;
+  }
+  .sub-form button:hover { background: var(--accent); }
+  .sub-form button:disabled { opacity: 0.6; cursor: default; }
+  .sub-msg { margin: 10px 0 0; min-height: 1.55em; font-size: 14.5px; color: var(--ink-2); }
+  .sub-msg.ok { color: var(--accent); }
+  .refs .plain .dot { color: var(--muted); padding: 0 0.35em; }
+  .contact a {
+    display: grid; grid-template-columns: 7rem 1fr auto; gap: 16px; align-items: baseline;
+    padding: 14px 0; border-bottom: 1px solid var(--rule);
+    text-decoration: none;
+  }
+  .contact a:first-of-type { border-top: 1px solid var(--rule); }
+  .contact a span:nth-child(2) { color: var(--muted); }
+  .contact a span:last-child { transition: transform 0.2s ease; }
+  .contact a:hover span:last-child { color: var(--accent); transform: translateX(3px); }
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
+  @media (max-width: 860px) {
+    :root { --pad: 20px; }
+    .hero { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; padding: 36px 0 28px; align-items: center; }
+    .hero > img { width: 92px; }
+    .hero p, .hero .links { grid-column: 1 / -1; }
+    .hero .text { display: contents; }
+    .hero h1 { align-self: end; }
+    section.block { grid-template-columns: 1fr; gap: 20px; padding: 32px 0 56px; }
+    .rows li { grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; }
+    .rows .v { grid-column: 2; }
+    .grid .row, .row.b, .row.c { grid-template-columns: 1fr; gap: 40px; }
+    .grid { gap: 40px; }
+    .tile .media { height: auto; aspect-ratio: var(--ar, 4 / 3); }
+    .grp { grid-template-columns: 1fr; gap: 8px; }
+    .refs .ref { grid-template-columns: minmax(0, 1fr) 1rem; gap: 2px 12px; padding: 9px 0; }
+    .refs .ref .src { grid-column: 1 / -1; }
+    .refs .also { grid-template-columns: 1fr; gap: 2px; padding: 9px 0; }
+    footer.end { grid-template-columns: 1fr; }
+    .fives-bar { grid-template-columns: 1fr; gap: 10px; padding: 16px 0; }
+    .fives-bar .sub-msg { grid-column: 1; }
+    .co-figs { grid-template-columns: 1fr 1fr; gap: 14px 20px; }
+    .co-figs .label { grid-column: 1 / -1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tile .media img, .contact a span:last-child, .refs .arr { transition: none; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
 
-	</body>
+  <header class="hero">
+    <img src="media/portrait-bw.jpg" width="560" height="700" alt="Rohan S. Puri speaking on a panel at the EV Charging Summit">
+    <div class="text">
+      <h1>Rohan S. Puri</h1>
+      <p>Former co-founder of <img class="logo" src="media/logos/stable.png" alt="">Stable. Working with founders, venture firms and infrastructure investors.</p>
+      <div class="links label">
+        <span>New York</span>
+        <a href="https://www.linkedin.com/in/rohanspuri"><img class="logo" src="media/logos/linkedin.svg" alt="">LinkedIn &rarr;</a>
+        <a href="https://x.com/rohanspuri"><img class="logo" src="media/logos/x.svg" alt="">X / Twitter &rarr;</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="fives-bar">
+    <p class="fives-copy"><span class="label">Newsletter</span> <a href="http://getfives.com">Fives</a>: five new research and technology ideas, every so often. <a class="past" href="http://archive.getfives.com">Past issues&nbsp;&nearr;</a></p>
+    <form class="sub-form" id="fives-form" action="https://rohanspuri.us5.list-manage.com/subscribe/post?u=076badfc558e06ebb62a22574&amp;id=18cf55a1dc" method="post" target="_blank" novalidate>
+      <label class="sr" for="fives-email">Email address</label>
+      <input type="email" name="EMAIL" id="fives-email" placeholder="Your email" autocomplete="email" required>
+      <div class="sr" aria-hidden="true"><input type="text" name="b_076badfc558e06ebb62a22574_18cf55a1dc" tabindex="-1" value=""></div>
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="sub-msg" id="fives-msg" role="status" aria-live="polite"></p>
+  </div>
+
+  <section class="block" id="now">
+    <div class="label">Now</div>
+    <ol class="rows">
+      <li><span class="n">01</span><span class="k">Founders</span><span class="v">Fundraising, first customers, pricing and exits.</span></li>
+      <li><span class="n">02</span><span class="k">Venture</span><span class="v">Partner work with early-stage funds: finding founders, diligence and portfolio support.</span></li>
+      <li><span class="n">03</span><span class="k">Energy</span><span class="v">Diligence and strategy for energy asset investors: demand, asset economics and operators.</span></li>
+    </ol>
+  </section>
+
+  <section class="block" id="work">
+    <div class="label">Work</div>
+    <div class="grid">
+
+      <div class="row b">
+        <figure class="tile" style="--ar: 780 / 519">
+          <a class="media" href="https://www.cnbc.com/2019/08/05/robotic-charging-station-pilot-for-self-driving-vehicles.html">
+            <img src="media/stable-robot.jpg" style="object-position: 74% 50%" width="780" height="519" loading="lazy" decoding="async" alt="Stable's robotic charging arm beside an Electrify America fast charger">
+            <video class="hover-play overlay" src="media/stable-robot.mp4" width="720" height="720" muted loop playsinline preload="none" aria-label="Stable's robotic arm unfolding and plugging into an electric car"></video>
+          </a>
+          <figcaption>
+            <div class="label"><img class="logo" src="media/logos/stable.png" alt="">Stable &middot; Robotics &middot; 2017&ndash;2020</div>
+            <p class="t">Robotic charging for self-driving fleets</p>
+            <p class="d">An arm that finds the charge port and plugs the car in with no driver. Piloted with Electrify America. <a href="https://patents.google.com/patent/US10685455B2/en">Patented</a>.</p>
+          </figcaption>
+        </figure>
+        <figure class="tile" style="--ar: 1120 / 864">
+          <div class="media">
+            <video class="hover-play" src="media/stable-product.mp4" poster="media/stable-product.jpg" width="1120" height="864" muted loop playsinline preload="metadata" aria-label="Stable's site forecasting product in use"></video>
+          </div>
+          <figcaption>
+            <div class="label"><img class="logo" src="media/logos/stable.png" alt="">Stable &middot; Forecasting &middot; 2020&ndash;2026</div>
+            <p class="t">Where to build chargers, and how to price them</p>
+            <p class="d">Forecasting and pricing software for charging networks, developers and investors, including bp pulse, Blink and EV Connect. The team joined EVgo in 2026.</p>
+          </figcaption>
+        </figure>
+        <div class="co-figs">
+          <div class="label"><img class="logo" src="media/logos/stable.png" alt="">Stable &middot; 2017&ndash;2026</div>
+          <div class="f"><b>$14M</b><span>raised across robotics and forecasting, led by Congruent Ventures</span></div>
+          <div class="f"><b>23,000+</b><span>charging sites evaluated with Stable&rsquo;s forecasts</span></div>
+        </div>
+      </div>
+
+      <div class="row c">
+        <figure class="tile" style="--ar: 4 / 3">
+          <a class="media" href="https://zensei.media.mit.edu/">
+            <video class="hover-play" src="media/zensei.mp4" poster="media/zensei-poster.jpg" width="800" height="600" muted loop playsinline preload="none" aria-label="A hand resting on Zensei's electrodes as sensing signals flow to the board"></video>
+          </a>
+          <figcaption>
+            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; 2017</div>
+            <p class="t">Zensei</p>
+            <p class="d">Recognizing people by touch, using bioimpedance. Published at <a href="https://zensei.media.mit.edu/">ACM CHI</a>.</p>
+          </figcaption>
+        </figure>
+        <figure class="tile" style="--ar: 4 / 3">
+          <a class="media" href="https://www.media.mit.edu/projects/at-home-sleep-apnea-screening/overview/">
+            <img src="media/aram.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Close-up of ARAM's custom circuit board: microcontroller, crystal, status LED and USB port">
+          </a>
+          <figcaption>
+            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; REDx &middot; 2016</div>
+            <p class="t">ARAM</p>
+            <p class="d">A low-cost sleep mask for screening sleep apnea at home. Published at <a href="https://ieeexplore.ieee.org/document/7591085/">IEEE EMBC</a>.</p>
+          </figcaption>
+        </figure>
+        <figure class="tile" style="--ar: 16 / 9">
+          <a class="media" href="https://www.youtube.com/watch?v=Ds5EOJcuLOk">
+            <img src="media/tedx.jpg" width="640" height="360" loading="lazy" decoding="async" alt="Rohan Puri speaking on stage at TEDxBeaconStreet">
+            <span class="play">&#9654;&ensp;Watch</span>
+          </a>
+          <figcaption>
+            <div class="label">TEDxBeaconStreet &middot; 2014</div>
+            <p class="t">Fooling yourself into success</p>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="block" id="elsewhere">
+    <div class="label">Elsewhere</div>
+    <div class="rec">
+
+      <div class="grp">
+        <h3 class="label">Press</h3>
+        <ul class="refs">
+          <li><a class="ref" href="https://www.bloomberg.com/news/articles/2024-03-06/ev-charging-stations-in-the-us-are-finally-getting-busy"><span class="src">Bloomberg<i>2024</i></span><span class="ttl">EV charging stations are now busy enough to make money in the US</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://ir.blinkcharging.com/news-events/press-releases/detail/2529/blink-charging-deploys-advanced-ai-modeling-with-stable"><span class="src">Blink Charging<i>2024</i></span><span class="ttl">Blink deploys advanced AI modeling with Stable Auto to increase site utilization</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://chargedevs.com/newswire/stable-analyzes-70-million-data-points-for-charging-site-locations-raises-14-million-in-series-a-round/"><span class="src">Charged EVs<i>2022</i></span><span class="ttl">Stable analyzes 70 million data points for charging site locations, raises $14 million</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.cnbc.com/2019/08/05/robotic-charging-station-pilot-for-self-driving-vehicles.html"><span class="src">CNBC<i>2019</i></span><span class="ttl">VW subsidiary to help with pilot of robotic charging stations for self-driving vehicles</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://techcrunch.com/2019/08/01/an-autonomous-robot-ev-charger-is-coming-to-san-francisco/"><span class="src">TechCrunch<i>2019</i></span><span class="ttl">An autonomous robot EV charger is coming to San Francisco</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><div class="also"><span class="src">Also covered by</span><span><a href="https://fortune.com/2024/03/07/ev-charging-stations-profitable-business-after-all/">Fortune</a>, <a href="https://www.axios.com/local/san-francisco/2024/03/13/electric-vehicle-charging-cost">Axios</a>, <a href="https://www.forbes.com/sites/lianeyvkoff/2019/08/01/robotic-ev-fast-charging-stations-planned-for-san-francisco/">Forbes</a>, <a href="https://www.engadget.com/2019/08/01/electrify-america-robots-self-driving-ev-chargers/">Engadget</a>, <a href="https://electrek.co/2019/08/01/electrify-america-autonomous-fast-charging-station-robot-arms-self-driving-cars/">Electrek</a>, <a href="https://www.digitaltrends.com/cars/electrify-america-and-stable-auto-robotic-charging-stations-for-self-driving-cars/">Digital Trends</a></span></div></li>
+        </ul>
+      </div>
+
+      <div class="grp">
+        <h3 class="label">Talks</h3>
+        <ul class="refs">
+          <li><div class="also recent"><span class="src"><img class="logo" src="media/logos/stable.png" alt="">For Stable</span><span><a href="https://evchargingsummit.com/2026-expo/summit-speakers">EV Charging Summit</a> <i>2024, 2025, 2026</i><span class="dot">&middot;</span><a href="https://www.nacsshow.com/Sessions/Education-Sessions/EV-Charging-Report-Card">NACS Show</a> <i>2025</i><span class="dot">&middot;</span><a href="https://intercharge-network-conference.com/speakers/rohan-puri">Intercharge Network Conference</a> <i>2025</i><span class="dot">&middot;</span><a href="https://smartgridobserver.com/EV-Summit-Chicago/agenda-july-2024.htm">EV Charging Infrastructure Summit</a> <i>2024</i><span class="dot">&middot;</span>EV Infra West <i>2023</i><span class="dot">&middot;</span>California Energy Commission <i>2020</i><span class="dot">&middot;</span>MIT E14 Fund, Beyond the Lab <i>2022, 2025</i></span></div></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=Ds5EOJcuLOk"><span class="src">TEDxBeaconStreet<i>2014</i></span><span class="ttl">Fooling yourself into success</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=Is2O666qDPs"><span class="src">Harvard Innovation Labs<i>2014</i></span><span class="ttl">Why you&rsquo;re over-thinking your UI/UX</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=XwKyfeeVfPA"><span class="src">MIT Media Lab<i>2013</i></span><span class="ttl">Lecture: optics and sensors in Glass and Kinect</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+      </div>
+
+      <div class="grp">
+        <h3 class="label">Patent</h3>
+        <ul class="refs">
+          <li><a class="ref" href="https://patents.google.com/patent/US10685455B2/en"><span class="src">US 10,685,455<i>2020</i></span><span class="ttl">Method and system for automated vehicle charging</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+      </div>
+
+      <div class="grp">
+        <h3 class="label">Papers</h3>
+        <ul class="refs">
+          <li><a class="ref" href="https://www.media.mit.edu/publications/zensei/"><span class="src">ACM CHI<i>2017</i></span><span class="ttl">Zensei: embedded, multi-electrode bioimpedance sensing for implicit, ubiquitous user recognition</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://ieeexplore.ieee.org/document/7591085/"><span class="src">IEEE EMBC<i>2016</i></span><span class="ttl">Design and preliminary evaluation of a wearable device for mass-screening of sleep apnea</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+      </div>
+
+      <div class="grp">
+        <h3 class="label">Podcasts</h3>
+        <ul class="refs">
+          <li><a class="ref" href="https://inbetweencharges.buzzsprout.com/2080020/episodes/18212917-why-some-dc-sites-print-money-and-others-bleed-cash"><span class="src">In-Between Charges<i>2025</i></span><span class="ttl">Why some DC fast charging sites print money and others bleed cash</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://share.transistor.fm/s/21b19734"><span class="src">Grid Connections<i>2025</i></span><span class="ttl">Making EV charging profitable with smart sites and dynamic pricing</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><div class="also"><span class="src">Also on</span><span><a href="https://www.youtube.com/watch?v=XEgsVyrQ0YI">Directly Current</a>, <a href="https://evs4everyone.com/what-making-money-on-ev-charging-looks-like/">EVs for Everyone</a>, <a href="https://podcasts.apple.com/us/podcast/mission-driven-episode-15-rohan-puri-stable-auto/id1483000238?i=1000606624914">Mission Driven</a>, <a href="https://www.entrepreneursforimpact.com/rohan-puri-ceo-of-stable">Entrepreneurs for Impact</a></span></div></li>
+        </ul>
+      </div>
+
+      <div class="grp">
+        <h3 class="label">Earlier</h3>
+        <ul class="refs">
+          <li><p class="plain"><img class="logo" src="media/logos/techstars.png" alt="">Techstars Boston <span class="dot">&middot;</span> <img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab, Camera Culture group</p></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="end">
+    <div>
+      <p class="big">Rohan S. Puri</p>
+      <p class="sub">New York</p>
+    </div>
+    <div class="contact">
+      <div class="label" style="margin-bottom: 12px;">Get in touch</div>
+      <a href="https://www.linkedin.com/in/rohanspuri"><span><img class="logo" src="media/logos/linkedin.svg" alt="">LinkedIn</span><span>The best way to reach me</span><span aria-hidden="true">&rarr;</span></a>
+      <a href="https://x.com/rohanspuri"><span><img class="logo" src="media/logos/x.svg" alt="">X / Twitter</span><span>@rohanspuri</span><span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  // Tile videos stay still until you hover them. On touch screens (no hover),
+  // they play while mostly on screen. Reduced-motion users get controls instead.
+  (function () {
+    var vids = document.querySelectorAll('video.hover-play');
+    var mq = function (q) { return window.matchMedia && window.matchMedia(q).matches; };
+    if (mq('(prefers-reduced-motion: reduce)')) { vids.forEach(function (v) { v.controls = true; }); return; }
+    vids.forEach(function (v) { v.addEventListener('playing', function () { v.classList.add('is-playing'); }); });
+    function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    if (mq('(hover: hover)')) {
+      vids.forEach(function (v) {
+        var tile = v.closest('.tile') || v;
+        tile.addEventListener('mouseenter', function () { play(v); });
+        tile.addEventListener('mouseleave', function () { v.pause(); v.currentTime = 0; v.classList.remove('is-playing'); });
+      });
+    } else if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.intersectionRatio >= 0.6) play(e.target); else { e.target.pause(); e.target.classList.remove('is-playing'); } });
+      }, { threshold: [0, 0.6] });
+      vids.forEach(function (v) { io.observe(v); });
+    }
+  })();
+
+  // Fives: subscribe in place through Mailchimp's JSONP endpoint.
+  // If that can't load, point people to the hosted Mailchimp signup page.
+  (function () {
+    var form = document.getElementById('fives-form');
+    var input = document.getElementById('fives-email');
+    var msg = document.getElementById('fives-msg');
+    var btn = form.querySelector('button');
+    function say(text, ok) { msg.textContent = text; msg.className = 'sub-msg' + (ok ? ' ok' : ''); }
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!input.checkValidity()) { say('Please enter a valid email address.'); input.focus(); return; }
+      btn.disabled = true; say('Subscribing…');
+      var cb = 'fives_cb_' + Date.now();
+      var s = document.createElement('script');
+      var done = false;
+      function finish() { done = true; btn.disabled = false; delete window[cb]; s.remove(); }
+      window[cb] = function (r) {
+        finish();
+        if (r && r.result === 'success') {
+          say('Almost done. Check your inbox to confirm.', true); form.reset();
+        } else {
+          var text = String((r && r.msg) || 'Something went wrong.').replace(/<[^>]*>/g, '').replace(/^\d+\s*-\s*/, '');
+          say(/already subscribed/i.test(text) ? 'You’re already subscribed. Thanks!' : text, /already subscribed/i.test(text));
+        }
+      };
+      function fallback() {
+        if (done) return; finish();
+        msg.className = 'sub-msg';
+        msg.innerHTML = 'Couldn’t reach the signup service. <a href="https://rohanspuri.us5.list-manage.com/subscribe?u=076badfc558e06ebb62a22574&amp;id=18cf55a1dc">Subscribe on the Fives page &nearr;</a>';
+      }
+      s.onerror = fallback;
+      setTimeout(fallback, 8000);
+      s.src = form.action.replace('/post?', '/post-json?') + '&c=' + cb +
+        '&EMAIL=' + encodeURIComponent(input.value) + '&b_076badfc558e06ebb62a22574_18cf55a1dc=';
+      document.body.appendChild(s);
+    });
+  })();
+</script>
+</body>
 </html>
