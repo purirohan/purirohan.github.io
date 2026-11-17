@@ -135,8 +135,8 @@
     width: 100%; height: 100%; object-fit: cover;
     transition: transform 0.6s ease;
   }
-  .tile .media img { transition: transform 1.6s cubic-bezier(.2, .6, .2, 1); }
-  .tile:hover .media img { transform: scale(1.06); }
+  .tile .media img { transition: transform 0.18s ease-out; will-change: transform; }
+  .tile:hover .media img { transform: scale(1.04); }
   .tile figcaption { padding-top: 14px; }
   .tile .t { font-weight: 500; margin: 6px 0 2px; }
   .tile .d { color: var(--ink-2); margin: 0; max-width: 38rem; }
@@ -361,7 +361,7 @@
             <span class="play">&#9654;&ensp;Watch</span>
           </a>
           <figcaption>
-            <div class="label">TEDxBeaconStreet &middot; 2014</div>
+            <div class="label"><img class="logo" src="media/logos/ted.png" alt="">TEDxBeaconStreet &middot; 2014</div>
             <p class="t">Fooling yourself into success</p>
           </figcaption>
         </figure>
@@ -390,9 +390,9 @@
         <h3 class="label">Talks</h3>
         <ul class="refs">
           <li><div class="also recent"><span class="src"><img class="logo" src="media/logos/stable.png" alt="">For Stable</span><span><a href="https://evchargingsummit.com/2026-expo/summit-speakers">EV Charging Summit</a> <i>2024, 2025, 2026</i><span class="dot">&middot;</span><a href="https://www.nacsshow.com/Sessions/Education-Sessions/EV-Charging-Report-Card">NACS Show</a> <i>2025</i><span class="dot">&middot;</span><a href="https://intercharge-network-conference.com/speakers/rohan-puri">Intercharge Network Conference</a> <i>2025</i><span class="dot">&middot;</span><a href="https://smartgridobserver.com/EV-Summit-Chicago/agenda-july-2024.htm">EV Charging Infrastructure Summit</a> <i>2024</i><span class="dot">&middot;</span>EV Infra West <i>2023</i><span class="dot">&middot;</span>California Energy Commission <i>2020</i><span class="dot">&middot;</span>MIT E14 Fund, Beyond the Lab <i>2022, 2025</i></span></div></li>
-          <li><a class="ref" href="https://www.youtube.com/watch?v=Ds5EOJcuLOk"><span class="src">TEDxBeaconStreet<i>2014</i></span><span class="ttl">Fooling yourself into success</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
-          <li><a class="ref" href="https://www.youtube.com/watch?v=Is2O666qDPs"><span class="src">Harvard Innovation Labs<i>2014</i></span><span class="ttl">Why you&rsquo;re over-thinking your UI/UX</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
-          <li><a class="ref" href="https://www.youtube.com/watch?v=XwKyfeeVfPA"><span class="src">MIT Media Lab<i>2013</i></span><span class="ttl">Lecture: optics and sensors in Glass and Kinect</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=Ds5EOJcuLOk"><span class="src"><img class="logo" src="media/logos/ted.png" alt="">TEDxBeaconStreet<i>2014</i></span><span class="ttl">Fooling yourself into success</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=Is2O666qDPs"><span class="src"><img class="logo" src="media/logos/harvard-ilab.png" alt="">Harvard Innovation Labs<i>2014</i></span><span class="ttl">Why you&rsquo;re over-thinking your UI/UX</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
+          <li><a class="ref" href="https://www.youtube.com/watch?v=XwKyfeeVfPA"><span class="src"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab<i>2013</i></span><span class="ttl">Lecture: optics and sensors in Glass and Kinect</span><span class="arr" aria-hidden="true">&nearr;</span></a></li>
         </ul>
       </div>
 
