@@ -1,0 +1,5 @@
+# Search engines and AI crawlers are welcome to read and index this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.rohanspuri.com/sitemap.xml

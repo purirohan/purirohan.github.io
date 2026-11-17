@@ -1,0 +1,53 @@
+# Rohan S. Puri
+
+> Operator and former co-founder and CEO of Stable (2017–2026). Raised $14M, led by Congruent Ventures, and took Stable from robotic EV charging to demand forecasting and pricing software for energy assets. Now works with early-stage founders and venture funds, and advises energy asset investors. Technical background in physical AI: robotics at Stable, and sensing and health diagnostics research at the MIT Media Lab. Based in New York.
+
+## Highlights
+
+- Co-founder and CEO of Stable (also known as Stable Auto), 2017–2026.
+- Raised $14M across Stable's robotics and forecasting businesses, led by Congruent Ventures.
+- Stable's forecasting and pricing software evaluated 23,000+ EV charging sites for charging networks, developers and infrastructure investors, including bp pulse, Blink and EV Connect. The Stable team joined EVgo in 2026.
+- 2017–2020: built a robotic arm that finds a car's charge port and plugs it in with no driver, for self-driving fleets. Piloted with Electrify America. US patent 10,685,455.
+- Before Stable: research at the MIT Media Lab (Camera Culture group) in sensing and health diagnostics. Zensei, bioimpedance sensing that recognizes who is touching a device (ACM CHI 2017). ARAM, a low-cost sleep mask for screening sleep apnea at home, from MIT's REDx program (IEEE EMBC 2016). Also Techstars Boston.
+- Regular speaker on the economics of EV charging and energy assets: EV Charging Summit (2024, 2025, 2026), NACS Show (2025), Intercharge Network Conference (2025), EV Charging Infrastructure Summit (2024), EV Infra West (2023), California Energy Commission (2020), MIT E14 Fund Beyond the Lab (2022, 2025). Earlier: TEDxBeaconStreet (2014).
+
+## Now
+
+- Founders: fundraising, first customers, pricing and exits.
+- Venture: partner work with early-stage funds, including finding founders, diligence and portfolio support.
+- Energy: diligence and strategy for energy asset investors, covering demand, asset economics and operators.
+
+## Areas of expertise
+
+Physical AI, robotics, sensing, bioimpedance, health diagnostics, wearables, energy assets, EV charging, demand forecasting, pricing, infrastructure investing, startup fundraising, early-stage venture.
+
+## Press
+
+- [Bloomberg, 2024: EV charging stations are now busy enough to make money in the US](https://www.bloomberg.com/news/articles/2024-03-06/ev-charging-stations-in-the-us-are-finally-getting-busy)
+- [Blink Charging, 2024: Blink deploys advanced AI modeling with Stable Auto to increase site utilization](https://ir.blinkcharging.com/news-events/press-releases/detail/2529/blink-charging-deploys-advanced-ai-modeling-with-stable)
+- [Charged EVs, 2022: Stable analyzes 70 million data points for charging site locations, raises $14 million](https://chargedevs.com/newswire/stable-analyzes-70-million-data-points-for-charging-site-locations-raises-14-million-in-series-a-round/)
+- [CNBC, 2019: VW subsidiary to help with pilot of robotic charging stations for self-driving vehicles](https://www.cnbc.com/2019/08/05/robotic-charging-station-pilot-for-self-driving-vehicles.html)
+- [TechCrunch, 2019: An autonomous robot EV charger is coming to San Francisco](https://techcrunch.com/2019/08/01/an-autonomous-robot-ev-charger-is-coming-to-san-francisco/)
+- Also covered by Fortune, Axios, Forbes, Engadget, Electrek and Digital Trends.
+
+## Patent and papers
+
+- [US 10,685,455 (2020): Method and system for automated vehicle charging](https://patents.google.com/patent/US10685455B2/en)
+- [ACM CHI 2017: Zensei: embedded, multi-electrode bioimpedance sensing for implicit, ubiquitous user recognition](https://www.media.mit.edu/publications/zensei/)
+- [IEEE EMBC 2016: Design and preliminary evaluation of a wearable device for mass-screening of sleep apnea](https://ieeexplore.ieee.org/document/7591085/)
+
+## Podcasts
+
+- [In-Between Charges, 2025: Why some DC fast charging sites print money and others bleed cash](https://inbetweencharges.buzzsprout.com/2080020/episodes/18212917-why-some-dc-sites-print-money-and-others-bleed-cash)
+- [Grid Connections, 2025: Making EV charging profitable with smart sites and dynamic pricing](https://share.transistor.fm/s/21b19734)
+- Also on Directly Current, EVs for Everyone, Mission Driven and Entrepreneurs for Impact.
+
+## Writing
+
+- [Fives](http://getfives.com): a newsletter of five new research and technology ideas. [Past issues](http://archive.getfives.com).
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/rohanspuri) (best way to reach Rohan)
+- [X / Twitter](https://x.com/rohanspuri)
+- Website: https://www.rohanspuri.com/

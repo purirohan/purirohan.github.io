@@ -3,15 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rohan S. Puri</title>
-<meta name="description" content="Rohan S. Puri. Former co-founder and CEO of Stable. Working with founders, venture firms and infrastructure investors. New York.">
+<title>Rohan S. Puri · Operator, former co-founder and CEO of Stable</title>
+<meta name="description" content="Rohan S. Puri is an operator and the former co-founder and CEO of Stable, which raised $14M to build robotic EV charging and then demand forecasting for energy assets. Works with early-stage founders and venture funds. Background in physical AI: robotics at Stable, and sensing and health diagnostics at the MIT Media Lab. New York.">
+<meta name="author" content="Rohan S. Puri">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://www.rohanspuri.com/">
-<meta property="og:title" content="Rohan S. Puri">
-<meta property="og:description" content="Former co-founder and CEO of Stable. Working with founders, venture firms and infrastructure investors.">
+<link rel="alternate" type="text/markdown" href="https://www.rohanspuri.com/llms.txt" title="Plain-text summary">
+<meta property="og:title" content="Rohan S. Puri · Operator, former co-founder and CEO of Stable">
+<meta property="og:description" content="Former co-founder and CEO of Stable ($14M raised; robotic EV charging, then energy forecasting). Works with early-stage founders and funds. Background in physical AI: robotics, sensing and health diagnostics.">
 <meta property="og:url" content="https://www.rohanspuri.com/">
 <meta property="og:image" content="https://www.rohanspuri.com/media/portrait-bw.jpg">
 <meta property="og:type" content="profile">
+<meta property="profile:first_name" content="Rohan">
+<meta property="profile:last_name" content="Puri">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@rohanspuri">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://www.rohanspuri.com/#page",
+      "url": "https://www.rohanspuri.com/",
+      "name": "Rohan S. Puri",
+      "mainEntity": {
+        "@id": "https://www.rohanspuri.com/#person"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.rohanspuri.com/#person",
+      "name": "Rohan S. Puri",
+      "alternateName": "Rohan Puri",
+      "url": "https://www.rohanspuri.com/",
+      "image": "https://www.rohanspuri.com/media/portrait-bw.jpg",
+      "jobTitle": "Operator; works with early-stage founders and venture funds",
+      "description": "Operator and former co-founder and CEO of Stable (2017–2026). Raised $14M, led by Congruent Ventures, to build robotic EV charging and then demand forecasting and pricing software for energy assets; Stable's forecasts evaluated 23,000+ charging sites for customers including bp pulse, Blink and EV Connect, and the team joined EVgo in 2026. Now works with early-stage founders and venture funds, and advises energy asset investors. Technical background in physical AI: robotics at Stable, and sensing and health diagnostics research at the MIT Media Lab.",
+      "homeLocation": {
+        "@type": "Place",
+        "name": "New York, NY"
+      },
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "MIT Media Lab",
+          "url": "https://www.media.mit.edu/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Techstars Boston"
+        }
+      ],
+      "knowsAbout": [
+        "Physical AI",
+        "Robotics",
+        "Sensing",
+        "Bioimpedance sensing",
+        "Health diagnostics",
+        "Wearables",
+        "Energy assets",
+        "EV charging",
+        "Demand forecasting",
+        "Pricing",
+        "Infrastructure investing",
+        "Startup fundraising",
+        "Early-stage venture capital",
+        "Go-to-market"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/rohanspuri",
+        "https://x.com/rohanspuri"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.rohanspuri.com/#stable",
+      "name": "Stable",
+      "alternateName": "Stable Auto",
+      "foundingDate": "2017",
+      "founder": {
+        "@id": "https://www.rohanspuri.com/#person"
+      },
+      "description": "Started in robotic charging for self-driving fleets (piloted with Electrify America; US patent 10,685,455), then built demand forecasting and pricing software for EV charging networks, developers and investors. Raised $14M, led by Congruent Ventures. The team joined EVgo in 2026."
+    }
+  ]
+}
+</script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -55,6 +133,7 @@
   img, video { display: block; max-width: 100%; height: auto; }
   .wrap { max-width: 1240px; margin: 0 auto; padding: 0 var(--pad); }
 
+  h2.label { margin: 0; }
   .label {
     font: 500 11.5px/1.4 var(--mono);
     letter-spacing: 0.09em;
@@ -89,7 +168,9 @@
     font-weight: 500;
     margin: 0 0 10px;
   }
-  .hero p { margin: 0; color: var(--ink-2); font-size: 1.0625rem; max-width: 40rem; }
+  .hero p { margin: 0; color: var(--ink-2); font-size: 1.0625rem; max-width: 40rem; text-wrap: pretty; }
+  .hero p.lede { max-width: 60rem; }
+  .hero p.bg { margin-top: 8px; font-size: 15px; line-height: 1.55; max-width: 50rem; }
   .hero .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 16px; }
   .hero .links a { text-decoration: none; color: var(--ink); }
   .hero .links a:hover { color: var(--accent); }
@@ -111,6 +192,7 @@
     border-bottom: 1px solid var(--rule);
   }
   .rows li:first-child { padding-top: 0; }
+  .rows li:last-child { border-bottom: 0; padding-bottom: 0; }
   .rows .n { font: 500 13px/1.9 var(--mono); color: var(--accent); }
   .rows .k { font-weight: 500; }
   .rows .v { color: var(--ink-2); }
@@ -239,11 +321,18 @@
 
   @media (max-width: 860px) {
     :root { --pad: 20px; }
-    .hero { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; padding: 36px 0 28px; align-items: center; }
-    .hero > img { width: 92px; }
-    .hero p, .hero .links { grid-column: 1 / -1; }
+    /* Phone: photo sits beside the name and blurb, its height matching theirs */
+    .hero {
+      grid-template-columns: 100px minmax(0, 1fr);
+      grid-template-areas: "img h1" "img p" "bg bg" "links links";
+      column-gap: 16px; row-gap: 0; padding: 32px 0 26px; align-items: start;
+    }
     .hero .text { display: contents; }
-    .hero h1 { align-self: end; }
+    .hero > img { grid-area: img; width: 100px; height: 100%; min-height: 0; align-self: stretch; object-fit: cover; object-position: 50% 30%; }
+    .hero h1 { grid-area: h1; margin: 0 0 8px; }
+    .hero .lede { grid-area: p; font-size: 15.5px; line-height: 1.5; }
+    .hero p.bg { grid-area: bg; margin-top: 16px; font-size: 14.5px; }
+    .hero .links { grid-area: links; margin-top: 18px; }
     section.block { grid-template-columns: 1fr; gap: 20px; padding: 32px 0 56px; }
     .rows li { grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; }
     .rows .v { grid-column: 2; }
@@ -272,7 +361,8 @@
     <img src="media/portrait-bw.jpg" width="560" height="700" alt="Rohan S. Puri speaking on a panel at the EV Charging Summit">
     <div class="text">
       <h1>Rohan S. Puri</h1>
-      <p>Former co-founder of <img class="logo" src="media/logos/stable.png" alt="">Stable. Working with founders, venture firms and infrastructure investors.</p>
+      <p class="lede">Operator and former co-founder and CEO of <img class="logo" src="media/logos/stable.png" alt="">Stable. Now working with early-stage founders and funds.</p>
+      <p class="bg">Took Stable from robotic EV charging to demand forecasting for energy assets, raising $14M. Background in physical AI: robotics at Stable, sensing and health diagnostics at the MIT Media Lab.</p>
       <div class="links label">
         <span>New York</span>
         <a href="https://www.linkedin.com/in/rohanspuri"><img class="logo" src="media/logos/linkedin.svg" alt="">LinkedIn &rarr;</a>
@@ -293,7 +383,7 @@
   </div>
 
   <section class="block" id="now">
-    <div class="label">Now</div>
+    <h2 class="label">Now</h2>
     <ol class="rows">
       <li><span class="n">01</span><span class="k">Founders</span><span class="v">Fundraising, first customers, pricing and exits.</span></li>
       <li><span class="n">02</span><span class="k">Venture</span><span class="v">Partner work with early-stage funds: finding founders, diligence and portfolio support.</span></li>
@@ -302,7 +392,7 @@
   </section>
 
   <section class="block" id="work">
-    <div class="label">Work</div>
+    <h2 class="label">Work</h2>
     <div class="grid">
 
       <div class="row b">
@@ -324,7 +414,7 @@
           <figcaption>
             <div class="label"><img class="logo" src="media/logos/stable.png" alt="">Stable &middot; Forecasting &middot; 2020&ndash;2026</div>
             <p class="t">Where to build chargers, and how to price them</p>
-            <p class="d">Forecasting and pricing software for charging networks, developers and investors, including bp pulse, Blink and EV Connect. The team joined EVgo in 2026.</p>
+            <p class="d">Software that forecasts demand and revenue for EV charging sites and sets their prices. Used by charging networks, developers and infrastructure investors, including bp pulse, Blink and EV Connect. The team joined EVgo in 2026.</p>
           </figcaption>
         </figure>
         <div class="co-figs">
@@ -340,9 +430,9 @@
             <video class="hover-play" src="media/zensei.mp4" poster="media/zensei-poster.jpg" width="800" height="600" muted loop playsinline preload="none" aria-label="A hand resting on Zensei's electrodes as sensing signals flow to the board"></video>
           </a>
           <figcaption>
-            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; 2017</div>
+            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; Sensing &middot; 2017</div>
             <p class="t">Zensei</p>
-            <p class="d">Recognizing people by touch, using bioimpedance. Published at <a href="https://zensei.media.mit.edu/">ACM CHI</a>.</p>
+            <p class="d">Sensing who is touching a device, using bioimpedance across embedded electrodes. Published at <a href="https://zensei.media.mit.edu/">ACM CHI</a>.</p>
           </figcaption>
         </figure>
         <figure class="tile" style="--ar: 4 / 3">
@@ -350,9 +440,9 @@
             <img src="media/aram.jpg" width="960" height="720" loading="lazy" decoding="async" alt="Close-up of ARAM's custom circuit board: microcontroller, crystal, status LED and USB port">
           </a>
           <figcaption>
-            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; REDx &middot; 2016</div>
+            <div class="label"><img class="logo" src="media/logos/mit-media-lab.png" alt="">MIT Media Lab &middot; Health &middot; 2016</div>
             <p class="t">ARAM</p>
-            <p class="d">A low-cost sleep mask for screening sleep apnea at home. Published at <a href="https://ieeexplore.ieee.org/document/7591085/">IEEE EMBC</a>.</p>
+            <p class="d">A low-cost sleep mask for screening sleep apnea at home, built in MIT&rsquo;s REDx health program. Published at <a href="https://ieeexplore.ieee.org/document/7591085/">IEEE EMBC</a>.</p>
           </figcaption>
         </figure>
         <figure class="tile" style="--ar: 16 / 9">
@@ -371,7 +461,7 @@
   </section>
 
   <section class="block" id="elsewhere">
-    <div class="label">Elsewhere</div>
+    <h2 class="label">Elsewhere</h2>
     <div class="rec">
 
       <div class="grp">
